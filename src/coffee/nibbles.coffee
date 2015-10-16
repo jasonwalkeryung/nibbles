@@ -49,4 +49,4 @@ client.addListener "registered", (message) ->
 client.addListener "message", (from, to, text, message) ->
   channel = message.args[0]
   response = parseMessage(text)
-  if response? then client.say(channel, response)
+  if response then client.say(channel, response)

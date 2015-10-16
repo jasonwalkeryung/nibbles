@@ -64,7 +64,7 @@
     var channel, response;
     channel = message.args[0];
     response = parseMessage(text);
-    if (response != null) {
+    if (response) {
       return client.say(channel, response);
     }
   });
