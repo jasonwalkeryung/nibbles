@@ -26,11 +26,11 @@ slack.on 'open', ->
     console.log "Connected to #{slack.team.name} as @#{slack.self.name}"
 
 slack.on 'message', (message) ->
-  response = parseMessage(message.text)
-  if response?
-    console.log response
-    channel = slack.getChannelGroupOrDMByID(message.channel)
-    channel.send response
+  if message?
+    response = parseMessage(message.text)
+    if response
+      channel = slack.getChannelGroupOrDMByID(message.channel)
+      channel.send response
 
 slack.on 'error', (err) ->
     console.error "Error", err
