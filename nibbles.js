@@ -52,12 +52,12 @@
 
   slack.login();
 
-  client = new irc.Client(config.irc.host, config.irc.nick, _.reject(config.irc, function(opt, value) {
+  client = new irc.Client(config.irc.host, config.irc.nick, _.omit(config.irc, function(value, opt) {
     return opt === 'host' || opt === 'nick';
   }));
 
   client.addListener("registered", function(message) {
-    return console.log("We're in!");
+    return console.log("Connected to " + config.irc.host);
   });
 
   client.addListener("message", function(from, to, text, message) {

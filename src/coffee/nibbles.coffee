@@ -38,13 +38,13 @@ slack.on 'error', (err) ->
 slack.login()
 
 # IRC
-client = new irc.Client(config.irc.host, config.irc.nick, _.reject(config.irc, (opt, value) ->
-  opt == 'host' or opt == 'nick'
+client = new irc.Client(config.irc.host, config.irc.nick, _.omit(config.irc, (value, opt) ->
+  return opt == 'host' || opt == 'nick'
 ))
 
 # IRC integration
 client.addListener "registered", (message) ->
-  console.log "We're in!"
+  console.log "Connected to " + config.irc.host
 
 client.addListener "message", (from, to, text, message) ->
   channel = message.args[0]

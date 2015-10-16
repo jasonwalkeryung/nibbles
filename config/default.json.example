@@ -3,13 +3,13 @@
     "token": "xoxb-TOKENNUMBER-TOKENHASH"
   },
   "irc" : {
-    "host": 'irc.example.com',
+    "host": "irc.example.com",
     "port": 1234,
     "secure": true,
     "selfSigned": true,
-    "nick": 'nibbles',
-    "userName": 'nibblebot',
-    "realName": 'Dr. J. Nibbles Brillat-Savarin',
-    "channels": ['#example']
+    "nick": "nibbles",
+    "userName": "nibblebot",
+    "realName": "Dr. J. Nibbles Brillat-Savarin",
+    "channels": ["#example"]
   }
 }
