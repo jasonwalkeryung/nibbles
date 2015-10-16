@@ -1,6 +1,6 @@
 {
   "name": "nibblebot",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "A bot that likes food but doesn't eat.",
   "license": "ISC",
   "repository": {
