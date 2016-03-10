@@ -15,10 +15,9 @@
       return pizzamath(qty[1], callback);
     } else if (msg.match(/^what's for lunch/) && (config.googleapis != null)) {
       google_places_api_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=" + config.googleapis.key + "&location=" + config.googleapis.lat + "," + config.googleapis.long + "&type=" + config.googleapis.types[0] + "&radius=200";
-      console.log(google_places_api_url);
       return place_fetch = https.get(google_places_api_url, function(res) {
         var responseString;
-        console.log("Got response: ${res.statusCode}");
+        console.log("Got response: " + res.statusCode);
         responseString = "";
         res.on('data', function(data) {
           return responseString += data;
@@ -30,7 +29,7 @@
           return callback("How about " + somewhere.name + "?");
         });
       }).on('error', function(e) {
-        console.log("Got error: ${e.message}");
+        console.log("Got error: " + e.message);
         return callback(false);
       });
     } else {
