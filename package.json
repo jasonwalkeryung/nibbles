@@ -13,6 +13,7 @@
   "dependencies": {
     "config": "^1.16.0",
     "irc": "^0.4.0",
+    "lodash": "^4.6.1",
     "slack-client": "^1.4.1",
     "underscore": "^1.8.3"
   },

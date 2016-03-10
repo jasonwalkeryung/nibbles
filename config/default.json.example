@@ -1,7 +1,4 @@
 {
-  "slack" : {
-    "token": "xoxb-TOKENNUMBER-TOKENHASH"
-  },
   "irc" : {
     "host": "irc.example.com",
     "port": 1234,
@@ -11,5 +8,18 @@
     "userName": "nibblebot",
     "realName": "Dr. J. Nibbles Brillat-Savarin",
     "channels": ["#example"]
+  },
+  "mattermost" : {
+    "enabled": false,
+    "url": "http://chat.team.birchbox.com/hooks/5fd68u6zhj83zn995dxyntrdcy"
+  },
+  "slack" : {
+    "token": "xoxb-TOKENNUMBER-TOKENHASH"
+  },
+  "googlesapis": {
+    "key": "GOOGLE API KEY GOES HERE",
+    "lat": "40.7434610",
+    "long": "-73.9853560",
+    "types": [ "restaurant", "meal_takeaway" ]
   }
 }
