@@ -52,7 +52,7 @@ if config.irc?
       if response then client.say(channel, response)
     )
 
-# http://chat.team.birchbox.com/hooks/45z3fbozfpyi385o1q6db3g74c
+# Mattermost
 if config.mattermost? and config.mattermost.enabled
   options = {}
   Mattermost = require('node-mattermost');
