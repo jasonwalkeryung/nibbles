@@ -11,7 +11,7 @@
   },
   "mattermost" : {
     "enabled": false,
-    "url": "http://chat.team.birchbox.com/hooks/5fd68u6zhj83zn995dxyntrdcy"
+    "url": ""
   },
   "slack" : {
     "token": "xoxb-TOKENNUMBER-TOKENHASH"
